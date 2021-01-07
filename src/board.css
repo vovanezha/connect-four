@@ -1,0 +1,27 @@
+.board__container {
+  display: inline-flex;
+  flex-direction: column;
+
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.cell > button {
+  width: 75%;
+  height: 75%;
+  border-radius: 100%;
+  background-color: white;
+}
