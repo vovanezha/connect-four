@@ -2,7 +2,7 @@
   display: inline-flex;
   flex-direction: column;
 
-  border: 1px solid black;
+  background-color: var(--main);
 }
 
 .row {
@@ -16,7 +16,6 @@
 
   width: 100px;
   height: 100px;
-  background-color: blue;
 }
 
 .cell > button {

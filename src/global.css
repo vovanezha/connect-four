@@ -1,3 +1,7 @@
+:root {
+  --main: #03a0ff;
+}
+
 body {
   margin: 0;
 }

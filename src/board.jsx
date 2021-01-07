@@ -17,7 +17,6 @@ function Board({ onUpdate }) {
 
   const handleCellClick = (selectedRow, selectedCell) => () => {
     for (let index = selectedRow; index < boardSchema.length; index++) {
-      console.log(index);
       if (boardSchema[index + 1] === undefined || boardSchema[index + 1][selectedCell] !== null) {
         boardSchema[index][selectedCell] = currentPlayer;
         break;
