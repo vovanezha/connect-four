@@ -1,5 +1,6 @@
 :root {
-  --main: #03a0ff;
+  --primary: #03a0ff;
+  --backdrop: #0000004d;
 }
 
 body {

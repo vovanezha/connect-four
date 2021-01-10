@@ -1,0 +1,26 @@
+.dialog-backdrop {
+  position: fixed;
+  overflow-y: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--backdrop);
+}
+
+[role="dialog"] {
+  background: white;
+  border-radius: 4px;
+  padding: 20px 30px;
+  min-height: 100vh;
+}
+
+@media screen and (min-width: 640px) {
+  [role="dialog"] {
+    position: absolute;
+    top: 25vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    min-height: auto;
+  }
+}

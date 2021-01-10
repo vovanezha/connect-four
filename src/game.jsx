@@ -1,5 +1,6 @@
 import React from "react";
 import Board from "./board";
+import ModalDialog from "./modal-dialog";
 import PlayerContext from "./players-context";
 
 // gets two dioganals "/" and "\" base on the selected disc
@@ -79,6 +80,9 @@ function Game({ onUpdate }) {
   return (
     <>
       <Board onUpdate={handleUpdate} />
+      <ModalDialog open={winner}>
+        <h1>You won!</h1>
+      </ModalDialog>
     </>
   );
 }

@@ -2,7 +2,7 @@
   display: inline-flex;
   flex-direction: column;
 
-  background-color: var(--main);
+  background-color: var(--primary);
 }
 
 .row {
