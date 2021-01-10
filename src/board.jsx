@@ -15,17 +15,21 @@ function Board({ onUpdate }) {
   const [boardSchema, setBoardSchema] = React.useState(INITIAL_BOARD_SCHEMA);
   const currentPlayer = React.useContext(PlayerContext);
 
-  const handleCellClick = (selectedRow, selectedCell) => () => {
+  const handleCellClick = (selectedRow, selectedColumn) => () => {
+    const updatedSchema = [...boardSchema];
+    let updatedRow;
+
     for (let index = selectedRow; index < boardSchema.length; index++) {
-      if (boardSchema[index + 1] === undefined || boardSchema[index + 1][selectedCell] !== null) {
-        boardSchema[index][selectedCell] = currentPlayer;
+      if (boardSchema[index + 1] === undefined || boardSchema[index + 1][selectedColumn] !== null) {
+        updatedSchema[index][selectedColumn] = currentPlayer;
+        updatedRow = index;
         break;
       }
     }
 
-    setBoardSchema(boardSchema);
+    setBoardSchema(updatedSchema);
 
-    onUpdate();
+    onUpdate(updatedSchema, updatedRow, selectedColumn);
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Board from "./board";
+import Game from "./game";
 import "./global.css";
 import PlayerContext, { PLAYER } from "./players-context";
 
@@ -13,9 +13,7 @@ const App = () => {
 
   return (
     <PlayerContext.Provider value={player}>
-      <main>
-        <Board onUpdate={hanldeUpdate} />
-      </main>
+      <Game onUpdate={hanldeUpdate} />
     </PlayerContext.Provider>
   );
 };
