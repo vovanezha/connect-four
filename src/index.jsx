@@ -13,7 +13,9 @@ const App = () => {
 
   return (
     <PlayerContext.Provider value={player}>
-      <Game onUpdate={hanldeUpdate} />
+      <main>
+        <Game onUpdate={hanldeUpdate} />
+      </main>
     </PlayerContext.Provider>
   );
 };
